@@ -27,15 +27,15 @@ namespace Exitium
                 int delay = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine($"\nWARNING: Your computer will shutdown in " + delay + " seconds. Save any work to avoid data loss.");
-                Console.WriteLine("\nPress 's' or 'q' to cancel.");
+                Console.WriteLine("\nPress 'S' to continue or 'Q' to cancel.");
                 string response2 = Console.ReadLine();
 
-                if (response2 == "s")
+                if (response2 == "S")
                 {
                     Process.Start($"shutdown.exe", "/s /f /t " + delay);
                 }
 
-                else if (response2 == "q")
+                else if (response2 == "Q")
                 {
                     Environment.Exit(1);
                 }

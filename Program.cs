@@ -8,6 +8,11 @@ namespace Exitium
     {
         static void Main(string[] args)
         {
+            PerformShutdown();
+        }
+
+        static void PerformShutdown()
+        {
             Console.WriteLine("Exitium - A Windows Complete Shutdown Utility");
             Console.WriteLine("Created by Joeffel Faelnar");
             Console.WriteLine("All rights reserved. \n \n");
@@ -29,7 +34,7 @@ namespace Exitium
             else
             {
                 Console.Clear();
-                Process.Start("Exitium.exe");
+                PerformShutdown();
             }
         }
     }

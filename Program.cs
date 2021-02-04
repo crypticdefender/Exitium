@@ -20,10 +20,16 @@ namespace Exitium
             Console.WriteLine("Are you sure you want to shutdown Windows? yes/no");
             string response = Console.ReadLine();
 
+
             if (response == "yes")
             {
+                Console.WriteLine("\nSpecify shutdown delay in seconds:");
+                int delay = Convert.ToInt32(Console.ReadLine());
 
-                Process.Start("shutdown.exe", "/s /f /t 0");
+                Console.WriteLine($"WARNING: Your computer will shutdown in " + delay + " seconds. Save any work to avoid data loss.");
+
+
+                Process.Start($"shutdown.exe", "/s /f /t " + delay);
             }
 
             else if (response == "no")

@@ -17,7 +17,7 @@ namespace Exitium
             Console.WriteLine("Created by Joeffel Faelnar");
             Console.WriteLine("All rights reserved. \n \n");
 
-            Console.WriteLine("Are you sure you want to shutdown Windows? yes/no");
+            Console.WriteLine("Are you sure you want to shutdown Windows? (yes/no)");
             string response = Console.ReadLine();
 
 
@@ -25,8 +25,24 @@ namespace Exitium
             {
                 Console.WriteLine("\nSpecify shutdown delay in seconds:");
                 int delay = Convert.ToInt32(Console.ReadLine());
+                
+                string timeunit;
+                int actualdelay;
 
-                Console.WriteLine($"\nWARNING: Your computer will shutdown in " + delay + " seconds. Save any work to avoid data loss.");
+                if (delay > 60)
+                {
+                    actualdelay = delay / 60;
+                    timeunit = "minutes";
+                }
+
+                else
+                {
+                    actualdelay = delay;
+                    timeunit = "seconds";
+                }
+
+                Console.WriteLine($"\nWARNING: Your computer will shutdown in " + actualdelay + " " + timeunit + ". Save any work to avoid data loss.");
+
                 Console.WriteLine("\nPress 'S' to continue or 'Q' to cancel.");
                 string response2 = Console.ReadLine();
 

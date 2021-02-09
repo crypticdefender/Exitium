@@ -30,7 +30,16 @@ namespace Exitium
                 int actual_delay;
 
                 actual_delay = delay * 60;
-                timeunit = "minutes";
+                
+                if (delay > 1)
+                {
+                    timeunit = "minutes";
+                }
+                    
+                else
+                {
+                    timeunit = "minute";
+                }
 
                 Console.WriteLine($"\nWARNING: Your computer will shutdown in " + delay + " " + timeunit + ". Save any work to avoid data loss.");
 

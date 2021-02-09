@@ -23,32 +23,23 @@ namespace Exitium
 
             if (response == "yes")
             {
-                Console.WriteLine("\nSpecify shutdown delay in seconds:");
+                Console.WriteLine("\nSpecify shutdown delay in minutes:");
                 int delay = Convert.ToInt32(Console.ReadLine());
                 
                 string timeunit;
-                int actualdelay;
+                int actual_delay;
 
-                if (delay > 60)
-                {
-                    actualdelay = delay / 60;
-                    timeunit = "minutes";
-                }
+                actual_delay = delay * 60;
+                timeunit = "minutes";
 
-                else
-                {
-                    actualdelay = delay;
-                    timeunit = "seconds";
-                }
+                Console.WriteLine($"\nWARNING: Your computer will shutdown in " + delay + " " + timeunit + ". Save any work to avoid data loss.");
 
-                Console.WriteLine($"\nWARNING: Your computer will shutdown in " + actualdelay + " " + timeunit + ". Save any work to avoid data loss.");
-
-                Console.WriteLine("\nPress 'S' to continue or 'Q' to cancel.");
+                Console.WriteLine("\nPress 'S' to continue or 'Q' to cancel. Press any other key to restart the application.");
                 string response2 = Console.ReadLine();
 
                 if (response2 == "S")
                 {
-                    Process.Start($"shutdown.exe", "/s /f /t " + delay);
+                    Process.Start($"shutdown.exe", "/s /f /t " + actual_delay);
                 }
 
                 else if (response2 == "Q")

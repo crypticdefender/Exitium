@@ -13,17 +13,17 @@ namespace Exitium
 
         static void PerformShutdown()
         {
-            Console.WriteLine("Exitium - A Windows Complete Shutdown Utility");
+            Console.WriteLine("Exitium - A Windows Process Purge Utility");
             Console.WriteLine("Created by Joeffel Faelnar");
             Console.WriteLine("All rights reserved. \n \n");
 
-            Console.WriteLine("Are you sure you want to shutdown Windows? (yes/no)");
+            Console.WriteLine("Are you sure you want to shut down Windows? (yes/no)");
             string response = Console.ReadLine();
 
 
             if (response == "yes")
             {
-                Console.WriteLine("\nSpecify shutdown delay in minutes:");
+                Console.WriteLine("\nSpecify shut down delay in minutes:");
                 int delay = Convert.ToInt32(Console.ReadLine());
                 
                 string timeunit;
@@ -41,7 +41,7 @@ namespace Exitium
                     timeunit = "minute";
                 }
 
-                Console.WriteLine($"\nWARNING: Your computer will shutdown in " + delay + " " + timeunit + ". Save any work to avoid data loss.");
+                Console.WriteLine($"\nWARNING: Your computer will power off in " + delay + " " + timeunit + ". Save any work to avoid data loss.");
 
                 Console.WriteLine("\nPress 'S' to continue or 'Q' to cancel. Press any other key to restart the application.");
                 string response2 = Console.ReadLine();

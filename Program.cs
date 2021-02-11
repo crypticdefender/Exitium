@@ -24,10 +24,10 @@ namespace Exitium
             if (response == "yes")
             {
                 Console.WriteLine("\nSpecify shut down delay in minutes:");
-                int delay = Convert.ToInt32(Console.ReadLine());
+                double delay = Convert.ToDouble(Console.ReadLine());
                 
                 string timeunit;
-                int actual_delay;
+                double actual_delay;
 
                 actual_delay = delay * 60;
                 

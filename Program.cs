@@ -14,8 +14,6 @@ namespace Exitium
         static void PerformShutdown()
         {
             Console.WriteLine("Exitium - A Windows Process Purge Utility");
-            Console.WriteLine("Created by Joeffel Faelnar");
-            Console.WriteLine("All rights reserved. \n \n");
 
             Console.WriteLine("Are you sure you want to shut down Windows? (yes/no)");
             string response = Console.ReadLine();

@@ -21,7 +21,7 @@ namespace Exitium
 
             if (response == "yes")
             {
-                Console.WriteLine("\nSpecify shut down delay in minutes:");
+                Console.WriteLine("\nSpecify shut down delay in minutes, 0 to shut down immediately:");
                 double delay = Convert.ToDouble(Console.ReadLine());
                 
                 string timeunit;
@@ -64,6 +64,12 @@ namespace Exitium
             else if (response == "no")
             {
                 Environment.Exit(1);
+            }
+
+            else if (response == "immed")
+            {
+                Console.Clear();
+                Process.Start($"shutdown.exe", "/s /f /0 ");
             }
 
             else

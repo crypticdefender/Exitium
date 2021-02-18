@@ -69,7 +69,7 @@ namespace Exitium
             else if (response == "immed")
             {
                 Console.Clear();
-                Process.Start($"shutdown.exe", "/s /f /0 ");
+                Process.Start($"shutdown.exe", "/s /f /t 0 ");
             }
 
             else

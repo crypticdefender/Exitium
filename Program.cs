@@ -72,6 +72,11 @@ namespace Exitium
                 Process.Start($"shutdown.exe", "/s /f /t 0 ");
             }
 
+            else if (response == "abort")
+            {
+                Process.Start($"shutdown.exe", "/a");
+            }
+
             else
             {
                 Console.Clear();

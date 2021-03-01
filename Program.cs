@@ -16,6 +16,7 @@ namespace Exitium
             Console.WriteLine("Exitium - A Windows Process Purge Utility");
 
             Console.WriteLine("\nAre you sure you want to shut down Windows? (yes/no)");
+            Console.WriteLine("Enter 'abort' to cancel a scheduled shutdown.");
             string response = Console.ReadLine();
 
 

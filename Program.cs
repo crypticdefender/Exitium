@@ -73,7 +73,7 @@ namespace Exitium
                 Process.Start($"shutdown.exe", "/s /f /t 0 ");
             }
 
-            else if (response == "movie")
+            else if (response == "emby")
             {
                 Console.Clear();
                 Process.Start($"shutdown.exe", "/s /f /t 480");

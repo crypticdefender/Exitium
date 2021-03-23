@@ -76,7 +76,7 @@ namespace Exitium
             else if (response == "emby")
             {
                 Console.Clear();
-                Process.Start($"shutdown.exe", "/s /f /t 14400");
+                Process.Start($"shutdown.exe", "/s /f /t 18000");
             }
 
             else if (response == "abort")
